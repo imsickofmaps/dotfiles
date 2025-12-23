@@ -53,7 +53,7 @@ fish, neovim, bat, eza, ripgrep, fzf, jq, starship, grc, tmux, gitui, dust, yazi
 python, uv, ruff, go, gopls, node, hugo, foundry, docker, colima
 
 ### GUI Apps
-Discord, Spotify, Firefox, Obsidian, Bitwarden, Alfred, Ghostty, Aerospace, Karabiner-Elements, Antigravity,and more
+Discord, Spotify, Firefox, Obsidian, Alfred, Ghostty, Aerospace, Karabiner-Elements, Antigravity,and more
 
 ### macOS Settings
 - Dock on bottom, small icons
