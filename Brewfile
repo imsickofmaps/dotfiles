@@ -51,7 +51,8 @@ cask "hammerspoon"
 cask "karabiner-elements"
 cask "aerospace"
 cask "antigravity"
-cask "docker"
+cask "docker-desktop"
+cask "notion"
 
 # Fonts
 cask "font-fira-code-nerd-font"
