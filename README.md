@@ -2,10 +2,12 @@
 
 macOS configuration managed with Homebrew, chezmoi, and shell scripts.
 
+hattip @allank 
+
 ## Quick Start (New Machine)
 
 ```bash
-git clone https://github.com/allank/dotfiles ~/Dev/dotfiles
+git clone https://github.com/imsickofmaps/dotfiles ~/Dev/dotfiles
 cd ~/Dev/dotfiles
 ./bootstrap.sh
 ```
@@ -54,7 +56,6 @@ python, uv, ruff, go, gopls, node, hugo, foundry, docker, colima
 Discord, Spotify, Firefox, Obsidian, Bitwarden, Alfred, Ghostty, Aerospace, Karabiner-Elements, Antigravity,and more
 
 ### macOS Settings
-- Dock on right side, small icons
+- Dock on bottom, small icons
 - Finder shows path bar and status bar  
 - Caps Lock → Hyper key (Cmd+Ctrl+Opt) via Karabiner-Elements
-- Right-click on trackpad enabled
