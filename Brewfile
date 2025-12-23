@@ -13,6 +13,7 @@ brew "jq"
 brew "starship"
 brew "grc"
 brew "chezmoi"
+brew "llm"
 
 # Development
 brew "python@3.12"
@@ -25,6 +26,8 @@ brew "hugo"
 
 # Utilities
 brew "docker"
+brew "docker-compose"
+brew "docker-credential-helper"
 brew "colima"
 brew "xh"
 brew "dust"
@@ -32,6 +35,7 @@ brew "yazi"
 brew "qemu"
 brew "foundry"
 brew "gemini-cli"
+brew "gh"
 
 # GUI Apps
 cask "discord"
@@ -47,6 +51,7 @@ cask "hammerspoon"
 cask "karabiner-elements"
 cask "aerospace"
 cask "antigravity"
+cask "docker"
 
 # Fonts
 cask "font-fira-code-nerd-font"
