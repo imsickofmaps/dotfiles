@@ -14,6 +14,7 @@ brew "starship"
 brew "grc"
 brew "chezmoi"
 brew "llm"
+brew "datasette"
 
 # Development
 brew "python@3.12"
@@ -53,6 +54,11 @@ cask "aerospace"
 cask "antigravity"
 cask "docker-desktop"
 cask "notion"
+cask "zappy"
+cask "spotify"
+cask "claude-code"
+cask "claude"
+cask "miro"
 
 # Fonts
 cask "font-fira-code-nerd-font"
