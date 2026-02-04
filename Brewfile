@@ -15,6 +15,7 @@ brew "grc"
 brew "chezmoi"
 brew "llm"
 brew "datasette"
+brew "gogcli"
 
 # Development
 brew "python@3.12"
