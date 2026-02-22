@@ -1,5 +1,7 @@
 # Taps
 tap "nikitabobko/tap"
+tap "2389-research/tap"
+brew "2389-research/tap/ccvault"
 
 # CLI Tools
 brew "fish"
