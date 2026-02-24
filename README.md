@@ -16,7 +16,8 @@ cd ~/Dev/dotfiles
 
 | Task | Command |
 |------|---------|
-| **Add/remove packages** | Edit `Brewfile` → `brew bundle` |
+| **Add/remove brew packages** | Edit `Brewfile` → `brew bundle` |
+| **Add/remove global npm packages** | Edit `npm-global-packages` → `./restrap.sh` |
 | **Update all packages** | `brew upgrade` |
 | **Apply dotfile changes** | `chezmoi apply` |
 | **Re-apply macOS settings** | `./macos-defaults.sh` |
@@ -27,19 +28,23 @@ cd ~/Dev/dotfiles
 
 ```
 ├── Brewfile              # All packages, casks, taps, fonts
+├── npm-global-packages   # Global npm packages (one per line)
 ├── bootstrap.sh          # One-time setup for new machines
+├── restrap.sh            # Update script for existing machines
 ├── macos-defaults.sh     # macOS system preferences
 │
 ├── dot_config/           # → ~/.config/
-│   ├── fish/config.fish
-│   ├── nvim/
-│   ├── starship.toml
 │   ├── aerospace/
+│   ├── chezmoi/
+│   ├── fish/config.fish
 │   ├── ghostty/
 │   ├── gitui/
 │   ├── karabiner/
+│   ├── nvim/
+│   ├── starship.toml
 │   └── tmux/
 │
+├── dot_docker/           # → ~/.docker/
 ├── dot_gitconfig         # → ~/.gitconfig
 └── dot_gitignore_global  # → ~/.gitignore_global
 ```
@@ -47,13 +52,13 @@ cd ~/Dev/dotfiles
 ## What's Included
 
 ### CLI Tools
-fish, neovim, bat, eza, ripgrep, fzf, jq, starship, grc, tmux, gitui, dust, yazi, xh, atac
+fish, neovim, bat, eza, ripgrep, fzf, jq, starship, grc, tmux, dust, yazi, xh, llm, datasette, gogcli, gh, gemini-cli
 
 ### Development
-python, uv, ruff, go, gopls, node, hugo, foundry, docker, colima
+python, uv, ruff, go, gopls, node, hugo, foundry, docker, docker-compose, colima, qemu
 
 ### GUI Apps
-Discord, Spotify, Firefox, Obsidian, Alfred, Ghostty, Aerospace, Karabiner-Elements, Antigravity,and more
+Discord, Spotify, Firefox, Obsidian, Alfred, Ghostty, Aerospace, Karabiner-Elements, Antigravity, Whatsapp, Zotero, Transmission, Hammerspoon, Docker Desktop, Notion, Zappy, Claude, Miro
 
 ### macOS Settings
 - Dock on bottom, small icons
