@@ -1,0 +1,4 @@
+# Global npm packages (one per line)
+# Managed by bootstrap.sh / restrap.sh
+
+@dokploy/cli

@@ -2,6 +2,7 @@
 # These files are part of the repo but should not be managed as dotfiles
 
 Brewfile
+npm-global-packages
 bootstrap.sh
 macos-defaults.sh
 README.md

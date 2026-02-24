@@ -17,7 +17,17 @@ echo "🚀 Updating macOS..."
 echo "📦 Installing packages from Brewfile..."
 brew bundle --file="$SCRIPT_DIR/Brewfile"
 
-
+# Sync global npm packages (install missing, remove unlisted)
+echo "📦 Syncing global npm packages..."
+NPM_WANTED=$(grep -v '^#' "$SCRIPT_DIR/npm-global-packages" | grep -v '^\s*$' | sort)
+if [ -n "$NPM_WANTED" ]; then
+    NPM_INSTALLED=$(npm ls -g --depth=0 --parseable 2>/dev/null | tail -n +2 | xargs -I{} basename {} | grep -v '^npm$' | sort)
+    NPM_TO_REMOVE=$(comm -23 <(echo "$NPM_INSTALLED") <(echo "$NPM_WANTED"))
+    if [ -n "$NPM_TO_REMOVE" ]; then
+        echo "$NPM_TO_REMOVE" | xargs npm uninstall -g
+    fi
+    echo "$NPM_WANTED" | xargs npm install -g
+fi
 
 # # Initialize chezmoi with this repo
 # echo "🔧 Setting up dotfiles with chezmoi..."

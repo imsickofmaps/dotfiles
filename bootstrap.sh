@@ -17,6 +17,10 @@ fi
 echo "📦 Installing packages from Brewfile..."
 brew bundle --file="$SCRIPT_DIR/Brewfile"
 
+# Install global npm packages
+echo "📦 Installing global npm packages..."
+grep -v '^#' "$SCRIPT_DIR/npm-global-packages" | grep -v '^\s*$' | xargs -r npm install -g
+
 # Initialize chezmoi with this repo
 echo "🔧 Setting up dotfiles with chezmoi..."
 chezmoi init --source="$SCRIPT_DIR" --apply
