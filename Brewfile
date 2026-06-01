@@ -1,9 +1,13 @@
 # Taps
 tap "nikitabobko/tap"
 tap "2389-research/tap"
+tap "KyleNesium/tap"
+tap "manaflow-ai/cmux"
 brew "2389-research/tap/ccvault"
 
+
 # CLI Tools
+cask "iterm2"
 brew "fish"
 brew "tmux"
 brew "neovim"
@@ -18,6 +22,8 @@ brew "chezmoi"
 brew "llm"
 brew "datasette"
 brew "gogcli"
+brew "marcus/tap/sidecar"
+brew "marcus/tap/td"
 
 # Development
 brew "python@3.12"
@@ -27,6 +33,8 @@ brew "go"
 brew "gopls"
 brew "node"
 brew "hugo"
+brew "cloudflared"
+
 
 # Utilities
 brew "docker"
@@ -40,6 +48,8 @@ brew "qemu"
 brew "foundry"
 brew "gemini-cli"
 brew "gh"
+brew "just" 
+cask "gcloud-cli"
 
 # GUI Apps
 cask "discord"
@@ -53,7 +63,6 @@ cask "firefox"
 cask "transmission"
 cask "hammerspoon"
 cask "karabiner-elements"
-cask "aerospace"
 cask "antigravity"
 cask "docker-desktop"
 cask "notion"
@@ -62,6 +71,8 @@ cask "spotify"
 cask "claude-code"
 cask "claude"
 cask "miro"
+cask "cmux"
+cask "finicky"
 
 # Fonts
 cask "font-fira-code-nerd-font"
