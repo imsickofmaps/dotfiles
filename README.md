@@ -34,7 +34,6 @@ cd ~/Dev/dotfiles
 ├── macos-defaults.sh     # macOS system preferences
 │
 ├── dot_config/           # → ~/.config/
-│   ├── aerospace/
 │   ├── chezmoi/
 │   ├── fish/config.fish
 │   ├── ghostty/
@@ -58,7 +57,7 @@ fish, neovim, bat, eza, ripgrep, fzf, jq, starship, grc, tmux, dust, yazi, xh, l
 python, uv, ruff, go, gopls, node, hugo, foundry, docker, docker-compose, colima, qemu
 
 ### GUI Apps
-Discord, Spotify, Firefox, Obsidian, Alfred, Ghostty, Aerospace, Karabiner-Elements, Antigravity, Whatsapp, Zotero, Transmission, Hammerspoon, Docker Desktop, Notion, Zappy, Claude, Miro
+Discord, Spotify, Firefox, Obsidian, Alfred, Ghostty, Karabiner-Elements, Antigravity, Whatsapp, Zotero, Transmission, Hammerspoon, Docker Desktop, Notion, Zappy, Claude, Miro
 
 ### macOS Settings
 - Dock on bottom, small icons

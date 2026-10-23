@@ -2,7 +2,11 @@
 # Converted from home-manager (modules/user.nix)
 
 # PATH configuration
-fish_add_path /opt/homebrew/bin
+# Use brew shellenv so both bin *and* sbin end up on PATH (network tools like
+# mtr live in sbin), plus MANPATH/INFOPATH — stays correct across brew changes.
+if test -x /opt/homebrew/bin/brew
+    /opt/homebrew/bin/brew shellenv fish | source
+end
 fish_add_path ~/.local/bin
 
 # Homebrew settings
@@ -52,3 +56,6 @@ end
 if command -q grc
     source /opt/homebrew/etc/grc.fish 2>/dev/null || true
 end
+
+# LM Studio CLI (lms)
+fish_add_path --append ~/.lmstudio/bin

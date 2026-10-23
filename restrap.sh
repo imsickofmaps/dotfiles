@@ -15,18 +15,37 @@ echo "🚀 Updating macOS..."
 
 # Update packages from Brewfile
 echo "📦 Installing packages from Brewfile..."
-brew bundle --file="$SCRIPT_DIR/Brewfile"
+brew bundle --file="$SCRIPT_DIR/Brewfile" || echo "⚠️  brew bundle had failures, continuing..."
 
 # Sync global npm packages (install missing, remove unlisted)
 echo "📦 Syncing global npm packages..."
 NPM_WANTED=$(grep -v '^#' "$SCRIPT_DIR/npm-global-packages" | grep -v '^\s*$' | sort)
 if [ -n "$NPM_WANTED" ]; then
-    NPM_INSTALLED=$(npm ls -g --depth=0 --parseable 2>/dev/null | tail -n +2 | xargs -I{} basename {} | grep -v '^npm$' | sort)
+    # Strip the global root prefix so scoped packages keep their @scope/ part
+    NPM_ROOT="$(npm root -g)"
+    NPM_INSTALLED=$(npm ls -g --depth=0 --parseable 2>/dev/null | grep "^$NPM_ROOT/" | sed "s|^$NPM_ROOT/||" | grep -vxE 'npm|corepack' | sort)
     NPM_TO_REMOVE=$(comm -23 <(echo "$NPM_INSTALLED") <(echo "$NPM_WANTED"))
     if [ -n "$NPM_TO_REMOVE" ]; then
         echo "$NPM_TO_REMOVE" | xargs npm uninstall -g
     fi
     echo "$NPM_WANTED" | xargs npm install -g
+fi
+
+# Sync uv tools (install missing, remove unlisted)
+echo "📦 Syncing uv tools..."
+UV_WANTED=$(grep -v '^#' "$SCRIPT_DIR/uv-tools" | grep -v '^\s*$' | sort)
+# Skip the "- <executable>" lines uv prints under each tool
+UV_INSTALLED=$(uv tool list 2>/dev/null | awk '!/^-/ && !/^No tools/ {print $1}' | sort)
+if [ -n "$UV_INSTALLED" ]; then
+    UV_TO_REMOVE=$(comm -23 <(echo "$UV_INSTALLED") <(echo "$UV_WANTED"))
+    if [ -n "$UV_TO_REMOVE" ]; then
+        echo "$UV_TO_REMOVE" | xargs -I{} uv tool uninstall {}
+    fi
+fi
+if [ -n "$UV_WANTED" ]; then
+    echo "$UV_WANTED" | while read -r pkg; do
+        uv tool install "$pkg"
+    done
 fi
 
 # # Initialize chezmoi with this repo

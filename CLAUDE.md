@@ -12,6 +12,7 @@ macOS dotfiles managed with **chezmoi**. Files prefixed with `dot_` (e.g., `dot_
 - `chezmoi diff` — preview what chezmoi would change
 - `brew bundle` — install/sync packages from Brewfile
 - `npm install -g <pkg>` — after adding to `npm-global-packages`
+- `uv tool install <pkg>` — after adding to `uv-tools`
 - `./bootstrap.sh` — full setup for a new machine (installs Homebrew, runs brew bundle, chezmoi init, macOS defaults, sets fish as default shell)
 - `./macos-defaults.sh` — re-apply macOS system preferences
 
@@ -20,7 +21,7 @@ macOS dotfiles managed with **chezmoi**. Files prefixed with `dot_` (e.g., `dot_
 - **chezmoi** handles symlinking: `dot_config/` → `~/.config/`, `dot_gitconfig` → `~/.gitconfig`, etc.
 - `.chezmoiignore` excludes repo-only files (Brewfile, scripts, README) from chezmoi management
 - **Unified Catppuccin Mocha theme** across Starship, Tmux, GitUI, Ghostty, and Neovim
-- **Caps Lock → Hyper key** (Cmd+Ctrl+Opt) via Karabiner-Elements, used for Aerospace window management
+- **Caps Lock → Hyper key** (Cmd+Ctrl+Opt) via Karabiner-Elements
 
 ## Neovim Setup
 
@@ -30,5 +31,6 @@ LazyVim-based config in `dot_config/nvim/`. Plugin specs live in `lua/plugins/`,
 
 - Adding a brew package: edit `Brewfile`, then `brew bundle`
 - Adding a global npm package: add to `npm-global-packages`, then `restrap.sh` (or `npm install -g <pkg>`)
+- Adding a uv tool: add to `uv-tools`, then `restrap.sh` (or `uv tool install <pkg>`)
 - Adding/changing a dotfile: edit the `dot_`-prefixed source in this repo, then `chezmoi apply`
 - Neovim plugins: add a new file or edit existing ones in `dot_config/nvim/lua/plugins/`

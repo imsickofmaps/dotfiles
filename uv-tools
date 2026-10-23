@@ -1,0 +1,5 @@
+# Global uv tools (one per line)
+# Managed by bootstrap.sh / restrap.sh
+# Install manually: uv tool install <pkg>
+
+graphifyy

@@ -1,6 +1,6 @@
 # Keymaps Reference
 
-Quick reference for all custom keybindings across Neovim and Aerospace.
+Quick reference for all custom keybindings for Neovim.
 
 > **Legend**: `<leader>` = Space, `C-` = Ctrl, `S-` = Shift, `alt-cmd-ctrl` = ⌥⌘⌃
 > **Note**: ⌥⌘⌃ is remaps to `<CAPS>` for ease of use
@@ -85,84 +85,3 @@ Quick reference for all custom keybindings across Neovim and Aerospace.
 | `<leader>D` | Type definition |
 | `<leader>ds` | Document symbols |
 | `<leader>ws` | Workspace symbols |
-
----
-
-## Aerospace (Window Manager)
-
-All Aerospace bindings use `alt-cmd-ctrl` (⌥⌘⌃) as the modifier.
-
-### Layout
-
-| Key | Action |
-|-----|--------|
-| `⌥⌘⌃ /` | Toggle tiles layout (horizontal/vertical) |
-| `⌥⌘⌃ ,` | Toggle accordion layout |
-| `⌥⌘⌃ .` | Toggle floating/tiling |
-
-### Focus
-
-| Key | Action |
-|-----|--------|
-| `⌥⌘⌃ h` | Focus left |
-| `⌥⌘⌃ j` | Focus down |
-| `⌥⌘⌃ k` | Focus up |
-| `⌥⌘⌃ l` | Focus right |
-
-### Move Window
-
-| Key | Action |
-|-----|--------|
-| `⌥⌘⌃⇧ h` | Move window left |
-| `⌥⌘⌃⇧ j` | Move window down |
-| `⌥⌘⌃⇧ k` | Move window up |
-| `⌥⌘⌃⇧ l` | Move window right |
-
-### Resize
-
-| Key | Action |
-|-----|--------|
-| `⌥⌘⌃ -` | Shrink window (-50) |
-| `⌥⌘⌃ =` | Grow window (+50) |
-
-### Workspaces
-
-| Key | Workspace |
-|-----|-----------|
-| `⌥⌘⌃ 1` | 1 - Mail & Calendar |
-| `⌥⌘⌃ 2` | 2 - Socials (Slack, Discord, WhatsApp) |
-| `⌥⌘⌃ 3` | 3 - Work (Jira) |
-| `⌥⌘⌃ 4-9` | 4-9 |
-| `⌥⌘⌃ b` | B - Browser |
-| `⌥⌘⌃ e` | E - External monitor |
-| `⌥⌘⌃ f` | F - Finder |
-| `⌥⌘⌃ m` | M - Music (Spotify) |
-| `⌥⌘⌃ n` | N - Notes (Obsidian) |
-| `⌥⌘⌃ t` | T - Terminal (Ghostty) |
-
-### Move Window to Workspace
-
-| Key | Action |
-|-----|--------|
-| `⌥⌘⌃⇧ 1-9` | Move to workspace 1-9 |
-| `⌥⌘⌃⇧ b/e/f/m/n/t` | Move to named workspace |
-
-### Other
-
-| Key | Action |
-|-----|--------|
-| `⌥⌘⌃ Tab` | Switch to previous workspace |
-| `⌥⌘⌃⇧ Tab` | Move workspace to next monitor |
-| `⌥⌘⌃⇧ ;` | Enter service mode |
-
-### Service Mode
-
-Enter with `⌥⌘⌃⇧ ;`, exit with `Esc`:
-
-| Key | Action |
-|-----|--------|
-| `Esc` | Reload config & exit |
-| `r` | Reset/flatten workspace |
-| `f` | Toggle floating |
-| `Backspace` | Close all windows but current |
-| `⌥⌘⌃⇧ h/j/k/l` | Join with adjacent window |

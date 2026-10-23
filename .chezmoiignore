@@ -10,3 +10,8 @@ LICENSE
 .git
 .gitignore
 .DS_Store
+restrap.sh
+uv-tools
+CLAUDE.md
+KEYMAPS.md
+.claude

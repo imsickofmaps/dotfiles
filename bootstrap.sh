@@ -21,6 +21,12 @@ brew bundle --file="$SCRIPT_DIR/Brewfile"
 echo "📦 Installing global npm packages..."
 grep -v '^#' "$SCRIPT_DIR/npm-global-packages" | grep -v '^\s*$' | xargs -r npm install -g
 
+# Install uv tools
+echo "📦 Installing uv tools..."
+grep -v '^#' "$SCRIPT_DIR/uv-tools" | grep -v '^\s*$' | while read -r pkg; do
+    uv tool install "$pkg"
+done
+
 # Initialize chezmoi with this repo
 echo "🔧 Setting up dotfiles with chezmoi..."
 chezmoi init --source="$SCRIPT_DIR" --apply
