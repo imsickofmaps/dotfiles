@@ -8,6 +8,8 @@ if test -x /opt/homebrew/bin/brew
     /opt/homebrew/bin/brew shellenv fish | source
 end
 fish_add_path ~/.local/bin
+# curl is keg-only; put brew's curl ahead of the macOS system one
+fish_add_path /opt/homebrew/opt/curl/bin
 
 # Homebrew settings
 set -gx HOMEBREW_NO_ENV_HINTS 1

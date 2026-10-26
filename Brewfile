@@ -2,6 +2,7 @@
 
 
 # CLI Tools
+brew "curl"
 cask "iterm2"
 brew "fish"
 brew "tmux"
