@@ -1,8 +1,12 @@
 # Taps
 
+# System
+brew "ca-certificates"
+brew "openssl"
+brew "curl"
+brew "wget"
 
 # CLI Tools
-brew "curl"
 cask "iterm2"
 brew "fish"
 brew "tmux"
@@ -75,6 +79,7 @@ cask "miro"
 cask "cmux"
 cask "finicky"
 cask "slack"
+cask "tailscale-app"
 
 # Fonts
 cask "font-fira-code-nerd-font"
